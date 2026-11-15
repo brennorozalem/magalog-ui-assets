@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1760 12" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="magaluRainbow" x1="0%" y1="0%" x2="200%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FCD000" />
+      <stop offset="6.25%" stop-color="#FF8A00" />
+      <stop offset="12.5%" stop-color="#FF253A" />
+      <stop offset="18.75%" stop-color="#FF37A8" />
+      <stop offset="25%" stop-color="#A400E1" />
+      <stop offset="31.25%" stop-color="#0086FF" />
+      <stop offset="37.5%" stop-color="#00CCE4" />
+      <stop offset="43.75%" stop-color="#00D604" />
+      <stop offset="50%" stop-color="#FCD000" />
+      <stop offset="56.25%" stop-color="#FF8A00" />
+      <stop offset="62.5%" stop-color="#FF253A" />
+      <stop offset="68.75%" stop-color="#FF37A8" />
+      <stop offset="75%" stop-color="#A400E1" />
+      <stop offset="81.25%" stop-color="#0086FF" />
+      <stop offset="87.5%" stop-color="#00CCE4" />
+      <stop offset="93.75%" stop-color="#00D604" />
+      <stop offset="100%" stop-color="#FCD000" />
+      <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="-1760 0" dur="4.5s" repeatCount="indefinite" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1760" height="12" fill="url(#magaluRainbow)" />
+</svg>
