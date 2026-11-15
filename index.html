@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magalu Rainbow Accent Bar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0078F0;
+    }
+    @keyframes magaluFlowRight {
+      0%   { background-position: 0% 50%; }
+      100% { background-position: -200% 50%; }
+    }
+    @keyframes magaluWave {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    #bar {
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(
+        90deg,
+        #FCD000 0%,
+        #FF8A00 6.25%,
+        #FF253A 12.5%,
+        #FF37A8 18.75%,
+        #A400E1 25%,
+        #0086FF 31.25%,
+        #00CCE4 37.5%,
+        #00D604 43.75%,
+        #FCD000 50%,
+        #FF8A00 56.25%,
+        #FF253A 62.5%,
+        #FF37A8 68.75%,
+        #A400E1 75%,
+        #0086FF 81.25%,
+        #00CCE4 87.5%,
+        #00D604 93.75%,
+        #FCD000 100%
+      );
+      background-size: 200% 100%;
+      animation: magaluFlowRight 4.5s linear infinite;
+      will-change: background-position;
+    }
+  </style>
+</head>
+<body>
+  <div id="bar"></div>
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var el = document.getElementById('bar');
+        var speed = parseFloat(params.get('speed'));
+        if (!isNaN(speed) && speed >= 0.5 && speed <= 30) {
+          el.style.animationDuration = speed + 's';
+        }
+        if (params.get('mode') === 'wave') {
+          el.style.animationName = 'magaluWave';
+          el.style.animationTimingFunction = 'ease-in-out';
+        }
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>
